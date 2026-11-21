@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: the official list, a platinum roadmap, missable warnings, progress tracking with export and import. Works offline.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Trophy Guide &amp; Tracker</p>
+    <h1>Leonida Legend</h1>
+    <p class="tagline">All 55 trophies, one platinum. The official list with a guide to every trophy in plain words, a three-step roadmap, the one missable you need to know about — and a checklist that remembers your progress in this browser.</p>
+    <div class="progress-block">
+      <div class="progress-numbers">
+        <span id="earned-count">0</span><span class="of"> / 55 earned</span>
+        <span id="progress-pct" class="pct">0%</span>
+      </div>
+      <div class="progress-bar" role="progressbar" aria-label="Trophy progress"><div id="progress-fill"></div></div>
+      <div id="grade-stats" class="grade-stats"></div>
+    </div>
+    <dl class="facts" id="facts"></dl>
+  </div>
+</header>
+
+<main>
+  <section id="missable-alert" class="alert" hidden>
+    <h2>⚠ One trophy can be missed</h2>
+    <p id="missable-text"></p>
+  </section>
+
+  <section class="roadmap card-section">
+    <h2>Roadmap to the platinum</h2>
+    <div id="roadmap-steps"></div>
+  </section>
+
+  <section class="controls card-section" aria-label="Checklist controls">
+    <div class="controls-row">
+      <label class="search">
+        <span class="sr-only">Search trophies</span>
+        <input id="search" type="search" placeholder="Search trophies…" autocomplete="off">
+      </label>
+      <label class="status-filter">Show
+        <select id="status-filter">
+          <option value="all">All trophies</option>
+          <option value="earned">Earned</option>
+          <option value="remaining">Not earned yet</option>
+          <option value="missable">Missable</option>
+        </select>
+      </label>
+      <label class="spoiler-toggle">
+        <input id="spoiler-toggle" type="checkbox" checked>
+        Hide story spoilers
+      </label>
+    </div>
+    <div class="controls-row">
+      <div id="kind-chips" class="chips" role="group" aria-label="Filter by kind"></div>
+    </div>
+    <div class="controls-row">
+      <div id="grade-chips" class="chips" role="group" aria-label="Filter by grade"></div>
+      <div class="io-buttons">
+        <button id="export-btn" type="button">Export progress</button>
+        <button id="import-btn" type="button">Import progress</button>
+        <input id="import-file" type="file" accept="application/json,.json" hidden>
+        <button id="reset-btn" type="button" class="danger">Reset</button>
+      </div>
+    </div>
+    <p id="showing" class="showing"></p>
+  </section>
+
+  <section id="list" class="trophy-grid" aria-live="polite"></section>
+  <p id="empty" class="empty" hidden>No trophies match these filters.</p>
+
+  <section class="about-data card-section">
+    <h2>About this list</h2>
+    <p id="list-note"></p>
+    <h3>Sources</h3>
+    <ul id="source-list"></ul>
+    <p class="fineprint">Every guide on this page is written in our own words from the sources above; the trophy names and descriptions are the official ones. Guides may be updated as launch-week information settles — five trophies were still unsolved when this guide was written, and their entries say so.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Unofficial fan-made guide. Not affiliated with Rockstar Games or Take-Two Interactive. No official artwork is used; the look of this page is original.</p>
+  <p>Your progress is stored only in this browser (localStorage). Export it to keep a backup or move it to another device.</p>
+</footer>
+
+<script src="data/trophies.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
